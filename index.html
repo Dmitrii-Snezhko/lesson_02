@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		var letter = [];
+var str = 'Backend As A Service';
+
+var firstCharIndex = null;
+for (var i=0; i<str.length; i++) {
+if (str[i] == ' ') {
+if (firstCharIndex !== null) {
+var s = str.substr(firstCharIndex, i-1);
+letter.push(s);
+firstCharIndex= null;
+}
+}
+else {
+if (firstCharIndex === null) {
+firstCharIndex = i;
+}
+}
+};															
+
+alert(str)
+	</script>
+</body>
+</html>
